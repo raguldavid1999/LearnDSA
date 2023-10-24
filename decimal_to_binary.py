@@ -7,7 +7,7 @@ def decimalToBinary(n):
     return b
 
 def binaryToDecimal(n):
-    res = 0
+    res = 0;
     powOf2 = 1
     for i in range(len(n)-1,-1,-1):
         if(n[i]=='1'):
