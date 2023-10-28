@@ -10,7 +10,7 @@
 
 import math
 def posOfrmsb(n):
-    return int(math.log10(n ^ (n & (n-1))) / math.log10(2)) + 1
+    return int(math.log2(n ^ (n-1))) + 1
 
 print(posOfrmsb(40))
 
