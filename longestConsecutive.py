@@ -5,4 +5,4 @@ def longestConsecutive(n):
         count = count + 1
     return count
     
-print(longestConsecutive(73))
+print(longestConsecutive(7))
