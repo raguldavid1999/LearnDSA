@@ -31,6 +31,4 @@ def gabriel_gcd(a, b):
         
 a = 20
 b = 15
-# print(gcd(a,b))
-# print(eqlid_gcd(a,b))
 print(gabriel_gcd(a,b))
