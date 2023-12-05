@@ -72,6 +72,8 @@ class Linkedlist:
         current = self.head
         if current is None:
             print('List is empty')
+        elif current.next is None:
+            current = None
         else:
             while current.next.next:
                 current = current.next
