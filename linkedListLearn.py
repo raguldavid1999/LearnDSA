@@ -56,6 +56,27 @@ class Linkedlist:
             last_node = last_node.next
         last_node.next = new_node
 
+    def add_before(self, data):
+        new_node = Node(data)
+        first_node = self.head
+        self.head = new_node
+        self.head.next = first_node
+
+    def delete_before(self):
+        if self.head:
+            self.head = self.head.next
+            return
+        return None
+    
+    def delete_end(self):
+        current = self.head
+        if current is None:
+            print('List is empty')
+        else:
+            while current.next.next:
+                current = current.next
+            current.next = None
+
     def get_node(self,value):
         current_node = self.head
 
@@ -81,6 +102,11 @@ mylist = Linkedlist()
 mylist.append(1)
 mylist.append(2)
 mylist.append(3)
+mylist.add_before(5)
+mylist.display()
+mylist.delete_before()
 mylist.insert_node(mylist.get_node(2), 4)
+mylist.display()
+mylist.delete_end()
 
 mylist.display()
