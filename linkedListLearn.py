@@ -88,13 +88,19 @@ class Linkedlist:
         else:
             current = self.head
             while current.next is not None:
-                if data == current.next.data:
-                    break
+                if current.next.data == data:
+                    current.next = current.next.next
+                    return
                 current = current.next
-            if current.next is None:
-                print('Not in list')
-            else:
-                current.next = current.next.next
+            print('Not in the list')
+            # while current.next is not None:
+            #     if data == current.next.data:
+            #         break
+            #     current = current.next
+            # if current.next is None:
+            #     print('Not in list')
+            # else:
+            #     current.next = current.next.next
             
         
             
@@ -130,7 +136,7 @@ mylist.display()
 # mylist.delete_before()
 mylist.insert_node(mylist.get_node(2), 4)
 mylist.display()
-mylist.delete_by_value(6)
+mylist.delete_by_value(5)
 # mylist.delete_end()
 
 mylist.display()
